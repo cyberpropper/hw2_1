@@ -17,8 +17,6 @@ public class Gryffindor extends Hogwarts {
     }
 
     public void compareGryffindorStudents(Gryffindor student) {
-        int totalPointsThisStudent = getMagicPower()+ getTransgressionDistance();
-        int totalPointsOtherStudent = student.getMagicPower() + student.getTransgressionDistance();
         int totalPrivatePointsThisStudent = nobility + honor + bravery;
         int totalPrivatePointsOtherStudent = student.nobility + student.honor + student.bravery;
 
@@ -28,14 +26,6 @@ public class Gryffindor extends Hogwarts {
             System.out.println(student.getName() + " лучший Гриффиндорец, чем " + getName());
         } else {
             System.out.println(getName() + " и " + student.getName() + " равны по качествам Гриффиндорца");
-        }
-
-        if (totalPointsThisStudent > totalPointsOtherStudent) {
-            System.out.println(getName() + " обладает бОльшей мощностью магии, чем " + student.getName());
-        } else if (totalPointsThisStudent < totalPointsOtherStudent) {
-            System.out.println(student.getName() + " обладает бОльшей мощностью магии, чем " + getName());
-        } else {
-            System.out.println(getName() + " и " + student.getName() + " равны по качествам");
         }
     }
 }

@@ -19,9 +19,7 @@ public class Ravenclaw extends Hogwarts {
         System.out.println("Креативность: " + creativity);
     }
 
-    public void compareGryffindorStudents(Ravenclaw student) {
-        int totalPointsThisStudent = getMagicPower()+ getTransgressionDistance();
-        int totalPointsOtherStudent = student.getMagicPower() + student.getTransgressionDistance();
+    public void compareRavenclawStudents(Ravenclaw student) {
         int totalPrivatePointsThisStudent = smart + wise + witty + creativity;
         int totalPrivatePointsOtherStudent = student.smart + student.wise + student.witty + student.creativity;
 
@@ -31,14 +29,6 @@ public class Ravenclaw extends Hogwarts {
             System.out.println(student.getName() + " лучший Когтевранец, чем " + getName());
         } else {
             System.out.println(getName() + " и " + student.getName() + " равны по качествам Когтевранца");
-        }
-
-        if (totalPointsThisStudent > totalPointsOtherStudent) {
-            System.out.println(getName() + " обладает бОльшей мощностью магии, чем " + student.getName());
-        } else if (totalPointsThisStudent < totalPointsOtherStudent) {
-            System.out.println(student.getName() + " обладает бОльшей мощностью магии, чем " + getName());
-        } else {
-            System.out.println(getName() + " и " + student.getName() + " равны по качествам");
         }
     }
 

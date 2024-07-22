@@ -16,9 +16,7 @@ public class Hufflepuff extends Hogwarts {
         System.out.println("Честь: " + honest);
     }
 
-    public void compareGryffindorStudents(Hufflepuff student) {
-        int totalPointsThisStudent = getMagicPower()+ getTransgressionDistance();
-        int totalPointsOtherStudent = student.getMagicPower() + student.getTransgressionDistance();
+    public void compareHufflepuffStudents(Hufflepuff student) {
         int totalPrivatePointsThisStudent = hardworking + loyal + honest;
         int totalPrivatePointsOtherStudent = student.hardworking + student.loyal + student.honest;
 
@@ -29,14 +27,5 @@ public class Hufflepuff extends Hogwarts {
         } else {
             System.out.println(getName() + " и " + student.getName() + " равны по качествам Пуфендуйца");
         }
-
-        if (totalPointsThisStudent > totalPointsOtherStudent) {
-            System.out.println(getName() + " обладает бОльшей мощностью магии, чем " + student.getName());
-        } else if (totalPointsThisStudent < totalPointsOtherStudent) {
-            System.out.println(student.getName() + " обладает бОльшей мощностью магии, чем " + getName());
-        } else {
-            System.out.println(getName() + " и " + student.getName() + " равны по качествам");
-        }
     }
-
 }

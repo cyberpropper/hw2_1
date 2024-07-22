@@ -4,6 +4,7 @@ public class Main {
         Gryffindor hermione = new Gryffindor("Гермиона Грейнджер", 50, 75, 90, 95, 80);
         Gryffindor ron = new Gryffindor("Рон Уизли", 80, 75, 60, 70, 90);
 
+
         harry.displayDescription();
         harry.displayDescriptionFacultyQualities();
         hermione.displayDescription();
@@ -26,9 +27,9 @@ public class Main {
         justin.displayDescription();
         justin.displayDescriptionFacultyQualities();
 
-        zaharia.compareGryffindorStudents(sedrik);
-        zaharia.compareGryffindorStudents(justin);
-        sedrik.compareGryffindorStudents(justin);
+        zaharia.compareHufflepuffStudents(sedrik);
+        zaharia.compareHufflepuffStudents(justin);
+        sedrik.compareHufflepuffStudents(justin);
 
         Ravenclaw jo = new Ravenclaw("Чжоу Чанг", 90, 11, 90,  90,  90,  100);
         Ravenclaw padma = new Ravenclaw("Падма Патил", 99,  23,  80,75,100, 50);
@@ -41,9 +42,9 @@ public class Main {
         markus.displayDescription();
         markus.displayDescriptionFacultyQualities();
 
-        jo.compareGryffindorStudents(padma);
-        jo.compareGryffindorStudents(markus);
-        padma.compareGryffindorStudents(markus);
+        jo.compareRavenclawStudents(padma);
+        jo.compareRavenclawStudents(markus);
+        padma.compareRavenclawStudents(markus);
 
         Slytherin drako = new Slytherin("Драко Малфой", 90, 100, 66, 70, 50, 100, 100);
         Slytherin grehem = new Slytherin("Грэхэм Монтегю", 100,10, 90, 90, 100, 60, 77);
@@ -56,9 +57,12 @@ public class Main {
         grehem.displayDescriptionFacultyQualities();
         gregor.displayDescriptionFacultyQualities();
 
-        drako.compareGryffindorStudents(grehem);
-        drako.compareGryffindorStudents(gregor);
-        grehem.compareGryffindorStudents(gregor);
+        drako.compareSlytherinStudents(grehem);
+        drako.compareSlytherinStudents(gregor);
+        grehem.compareSlytherinStudents(gregor);
 
+
+        grehem.compareHogwartsStudents(jo);
+        drako.compareHogwartsStudents(justin);
     }
 }

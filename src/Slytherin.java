@@ -23,10 +23,8 @@ public class Slytherin extends Hogwarts {
     }
 
 
-    public void compareGryffindorStudents(Slytherin student) {
-        int totalPointsThisStudent = getMagicPower()+ getTransgressionDistance();
+    public void compareSlytherinStudents(Slytherin student) {
         int totalPrivatePointsThisStudent = cunning + decisiveness + ambition + resourcefulness + authority;
-        int totalPointsOtherStudent = student.getMagicPower() + student.getTransgressionDistance();
         int totalPrivatePointsOtherStudent = student.cunning + student.decisiveness + student.ambition + student.resourcefulness + student.authority;
 
         if (totalPrivatePointsThisStudent > totalPrivatePointsOtherStudent) {
@@ -35,14 +33,6 @@ public class Slytherin extends Hogwarts {
             System.out.println(student.getName() + " лучший Слизеринец, чем " + getName());
         } else {
             System.out.println(getName() + " и " + student.getName() + " равны по качествам Слизеринца");
-        }
-
-        if (totalPointsThisStudent > totalPointsOtherStudent) {
-            System.out.println(getName() + " обладает бОльшей мощностью магии, чем " + student.getName());
-        } else if (totalPointsThisStudent < totalPointsOtherStudent) {
-            System.out.println(student.getName() + " обладает бОльшей мощностью магии, чем " + getName());
-        } else {
-            System.out.println(getName() + " и " + student.getName() + " равны по качествам");
         }
     }
 

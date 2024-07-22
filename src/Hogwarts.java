@@ -3,6 +3,19 @@ public class Hogwarts {
     private int magicPower;
     private int transgressionDistance;
 
+    public void compareHogwartsStudents(Hogwarts student) {
+        int totalPointsThisStudent = getMagicPower() + getTransgressionDistance();
+        int totalPointsOtherStudent = student.getMagicPower() + student.getTransgressionDistance();
+
+        if (totalPointsThisStudent > totalPointsOtherStudent) {
+            System.out.println(getName() + " обладает бОльшей мощностью магии, чем " + student.getName());
+        } else if (totalPointsThisStudent < totalPointsOtherStudent) {
+            System.out.println(student.getName() + " обладает бОльшей мощностью магии, чем " + getName());
+        } else {
+            System.out.println(getName() + " и " + student.getName() + " равны по качествам");
+        }
+    }
+
     public Hogwarts(String name, int magicPower, int transgressionDistance) {
         this.name = name;
         this.magicPower = magicPower;
@@ -15,7 +28,6 @@ public class Hogwarts {
         System.out.println("Расстояние трансгрессии: " + transgressionDistance);
     }
 
-
     public String getName() {
         return name;
     }
@@ -27,5 +39,4 @@ public class Hogwarts {
     public int getTransgressionDistance() {
         return transgressionDistance;
     }
-
 }
